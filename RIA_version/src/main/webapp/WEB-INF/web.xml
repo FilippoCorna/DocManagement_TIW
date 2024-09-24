@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>TIW</display-name>
+	<context-param>
+		<param-name>dbUrl</param-name>
+		<param-value>jdbc:mysql://localhost:3306/project3?serverTimezone=UTC</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbUser</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbPassword</param-name>
+		<param-value>P@lpatine99</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbDriver</param-name>
+		<param-value>com.mysql.cj.jdbc.Driver</param-value>
+	</context-param>
+ <filter> 
+      <filter-name>LoginChecker</filter-name>
+      <filter-class>it.polimi.tiw.Project3_RIA.filters.LoginChecker</filter-class> 
+ </filter>
+ <filter-mapping> 
+    <filter-name>LoginChecker</filter-name> 
+    <url-pattern>/ShowHomePage</url-pattern> 
+    <url-pattern>/Home.html</url-pattern> 
+ </filter-mapping>
+	<welcome-file-list>
+		<welcome-file>Welcome</welcome-file>
+	</welcome-file-list>
+</web-app>

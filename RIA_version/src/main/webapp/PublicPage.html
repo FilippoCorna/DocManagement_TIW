@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PUBLIC PAGE</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/PublicPage.css" >
+<script src="JS/utils.js" charset="utf-8" defer></script>
+<script src="JS/Public.js" charset="utf-8" defer></script>		
+</head>
+<body>
+
+<h1>PUBLIC PAGE</h1>
+
+
+<h2>LOGIN</h2>
+<form method="post" action="Login" id="login">
+			
+			<label for ="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter username" name="username" id="username" required /><br><br>
+			
+			<label for = "password" ><b>Password</b></label>
+			<input type="password" placeholder="Enter password" name="password" id="password" required/><br><br>
+				 
+			<button type="submit" id="loginButton" >submit</button>
+			
+			<div class="Error" id="loginMessage">
+			</div>
+</form>
+
+
+
+<br><br><br><br>
+<div class = "message">
+Don't you have an account?
+</div>
+
+
+<h2>REGISTRATION</h2>
+<form action="#" id="registration">
+			
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter username" name="username" id="usernameR" required ><br><br>
+			
+			<label for="email"><b>E-mail</b></label>
+			<input type="text" placeholder="Enter e-mail" name="email" id="emailR" required><br><br>
+			
+			<label for="password1"><b>Password</b></label>
+			<input type="password" placeholder="Enter password" name="password1" id="password1R" required><br><br>
+			
+			<label for="password2"><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat password" name="password2" id="password2R" required/><br><br>
+				 
+			<button type="submit" id="registrationButton">submit</button>
+			
+			<div id="registrationMessage">
+			</div>
+		
+</form>
+
+
+</body>
+</html>

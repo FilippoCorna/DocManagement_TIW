@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css" />
+<script src="JS/ShowHome.js" charset="utf-8" defer></script>
+<script src="JS/utils.js" charset="utf-8" defer></script>		
+<script src="JS/CreationFunctions.js" charset="utf-8" defer></script>			
+<script src="JS/ShowDocuments.js" charset="utf-8" defer></script>
+<script src="JS/move.js" charset="utf-8" defer></script>	
+<script src="JS/deleteDoc.js" charset="utf-8" defer></script>			
+
+</head>
+<body>
+
+<div class="header">
+<h1>Home Page </h1> 
+</div>
+
+<div class="text">
+<h2 id="username">Franco</h2>
+<a href="Logout">Logout</a> 
+
+<img src="binOrange.png" id="bin"/>
+
+<ul id="createfold" class="clickable"><a>Crea nuova cartella</a>
+	</ul>
+
+<div id= "show">
+	<ul id="folderList">
+	</ul>
+</div>
+
+</div>
+
+
+<form id="foldCreation" action="#" class="hidden">
+	<h2> Crea Cartella</h2>
+			<label for="folderName"><b>Nome della Cartella</b></label><br>
+			<input type="text" id="folderName" name="folderName">  
+			<button type="submit" id="foldCreationButton">submit</button>
+			<button type="submit" id="foldCancelButton">indietro</button>
+			
+			<div id="foldCreationMessage" class="Error">
+			</div>
+</form>
+
+
+<form action="#" id="subCreation" class="hidden">
+			<h2> Crea Sottocartella</h2><br>
+			<label for="name"><b>Nome della sottocartella</b></label><br>
+			<input type="text" placeholder="name" name="name" id="name"><br><br>
+			<span id="folderFather"></span><br><br>	
+			
+			<input type="text" id="folderId" name="folderId" class ="hidden"> 
+			<button type="submit" id="subCreationButton">submit</button>
+			<button type="submit" id="subCancelButton">indietro</button>
+			
+			<div id="subCreationMessage" class="Error">
+			</div>
+		
+</form>
+
+<form action="#" id="docCreation" class="hidden">
+			<h2> Crea Documento</h2><br>
+			<label for="docname"><b>Nome del documento</b></label><br>
+			<input type="text" placeholder="name" name="docname" id="docname"><br><br>
+			<label for="type"><b>Tipo</b></label><br>
+			<input type="text" placeholder="type" name="type" id="type"><br><br>
+			<label for="summary"><b>Sommario</b></label><br>
+			<textarea  placeholder="Enter summary" id ="summary" 
+			name= "summary"  rows= "4" cols="40"  ></textarea><br><br>
+			<span id="subfolderFather"></span><br><br>	
+			
+			<input type="text" id="subfolderId" name="subfolderId" class ="hidden"> 
+			<button type="submit" id="docCreationButton">submit</button>
+			<button type="submit" id="docCancelButton">indietro</button>
+			
+			<div id="docCreationMessage" class="Error">
+			</div>
+		
+</form>
+
+<form action="#" id="deleteForm" class="hidden">
+		<span id="docToDelete"></span><br><br>
+		<button type="submit" id="deleteButton">submit</button>
+		<button type="submit" id="delCancelButton">indietro</button>
+</form>
+</body>
+</html>
