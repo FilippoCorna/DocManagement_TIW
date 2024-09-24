@@ -56,3 +56,9 @@ CreateFolder
 CreateSubfolder
 CreateDocument
 All others are invoked via the doGet method.
+
+
+
+Team:
+- [Filippo Corna](https://github.com/FilippoCorna)
+- [Daniele di Santi](https://github.com/DanieleDiSanti)
