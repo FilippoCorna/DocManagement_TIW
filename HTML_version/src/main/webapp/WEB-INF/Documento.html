@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css" />
+</head>
+<body>
+<div class = "header">
+<h1>DOCUMENTO</h1>
+</div>
+<h2 th:text="${user.username}">Franco</h2>
+<a href="Logout">Logout</a>
+<h4 class="Document" th:text="${document.name}">Documento Hello</h4>
+<br><br>
+<table border = "1">
+	<tr>
+		<td>Nome: </td>
+		<td th:text="${document.name}">Hello</td>
+	</tr>
+	<tr>
+		<td>Data: </td>
+		<td th:text="${document.getDate()}">txt</td>
+	</tr>
+	<tr>
+		<td>Tipo: </td>
+		<td th:text="${document.type}">txt</td>
+	</tr>
+	<tr>
+		<td>Sommario: </td>
+		<td th:text=${document.summary}>La risposta alla domanda fondamentale dell'universo è 42!</td>
+	</tr>
+</table>
+
+
+<a th:href = "@{Documents(subfolderId=${subfolder} , name=${subfolderName})}">Pagina precedente</a>
+
+
+</body>
+</html>

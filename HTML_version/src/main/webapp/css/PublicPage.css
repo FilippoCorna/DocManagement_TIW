@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+
+h1{
+	color: #ff8c00 ;
+	text-align:center;
+}
+
+h2{
+	color: #ff8c00;
+	text-align:center;
+}
+
+div[class = message] {
+	background: white;
+	color:grey;
+	text-align:center;
+	font:small-caption;
+}
+
+div[class = Error] {
+	background: white;
+	color:red;
+	text-align:center;
+	font:small-caption;
+}
+
+
+form{
+	text-align:center;
+}
+
+b{
+	color:#ff8c00;
+}
+
+
+
+input[type = text]{
+	border-radius: 55px;
+	border : 2px solid black;
+	color: black;
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+	
+}
+
+
+
+input[type = password]{
+	border-radius: 55px;
+	border : 2px solid black;
+	color: black;
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+	
+}
+
+button[type = submit]{
+	border-radius: 55px;
+	border : 2px solid black;
+	background: #ff8c00;
+	color: white;
+	width: 100px;
+	height: 30px;
+	
+}
+
+button[type = submit]:focus{
+	color: #ff8c00;
+	background: white;
+}
+
+button[type = submit]:hover{
+	color: white;
+	background: #ff4500;
+	cursor: pointer;
+}
+
+input[type = text]:focus {
+	outline: none !important;
+	border : 2px solid #ff8c00;
+	
+}
+
+input[type = password]:focus {
+	outline: none !important;
+	border : 2px solid #ff8c00;
+
+	
+	
+}

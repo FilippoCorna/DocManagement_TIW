@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css" />
+</head>
+<body>
+
+<div class="header">
+<h1>Home Page </h1> 
+</div>
+
+
+<div class="text">
+<h2 th:text="${user.username}">Franco</h2>
+<a href="Logout">Logout</a> <a href="/project3test/GoToGestioneContenuti">Gestione Contenuti</a>
+
+<tbody th:remove ="all-but-first">
+<ul>
+	<li 
+		th:each="folder : ${folders}"
+		th:insert="@{WEB-INF/fragment.html} :: list (folder)">
+	</li>	
+	
+</ul>
+<ul>
+	<li>Cartella 1
+		<ul>
+		<li selected="false"><a href = Documents.html>Sottocartella 1a</a> XXX 
+		<li selected = "true"><a href = Documents.html>Sottocartella 1b</a> XXX
+		</ul>
+	<li>Cartella 2
+		<ul>
+			<li selected = "false"><a href = Documents.html>Sottocartella 2a</a>
+		</ul>
+</ul>
+</tbody>
+
+</div>
+</body>
+</html>

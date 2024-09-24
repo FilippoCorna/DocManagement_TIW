@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+ 	<!--/*  declare parameterized fragment called "list" */-->
+	<div th:fragment="list(folder)">
+
+		<div>
+			<span th:text="${folder.name}"><b>Cartella</b></span>
+			<ul>
+			<li 
+				th:each = "subfolder : ${folder.subfolders}">
+			<span th:text ="${subfolder.name}"></span>
+			<a th:href ="@{/Documents(subfolderId=${subfolder.getId()} , name=${subfolder.getName()})}">Accedi</a>
+			</li>
+			
+			</ul>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+@charset "ISO-8859-1";
+
+
+
+li[selected = false]{
+	color: grey;
+	
+}
+
+li[selected = true]{
+	color: red;
+	text-decoration: underline;
+}
+
+h1{
+	background: #ff8c00;
+	color: white;
+	text-align: left;
+	font: message;
+	font-size: 30px;  
+	padding: 10px;
+}
+
+.header{
+	background: #ff8c00;
+	color: white;
+	text-align: center;
+	font: message;
+	font-size: 15px;  
+	padding: 1px;
+	
+}
+
+
+h2{
+	color: white;
+	text-decoration: dotted grey;
+	text-align:center;
+	background: #ff8c00;
+	border: 5px double white ;
+		border-radius: 55px;
+
+	width: 200px;
+	height: 27px;
+	padding-left: 5px;
+	padding: 2px;
+}
+
+h3{
+	color: white;
+	text-align:center;
+	background: #ff8c00;
+	border: 5px double white ;
+		border-radius: 55px;
+
+	width: 100px;
+	height: 20px;
+	padding: 5px;
+}
+
+h4[class = Document]{
+	color: white;
+	text-align:center;
+	font-size: 20px;
+	margin: auto;
+	background: #696969;
+	border: 5px double white ;
+		border-radius: 10px;
+
+	width: 200px;
+	height: 40px;
+	padding: 5px;
+	padding-top: 15px;
+	padding-bottom:15px;
+}
+
+table{
+	margin: auto;
+	border: ridge #696969;
+	font-family: sans-serif;
+	font-size: 20px;
+	
+}
+
+a{
+	color: #ff8c00;
+	text-align: center;
+	text-decoration-color: white ;
+}
+
+a:visited{
+	color: #ff8c00;
+}
+
+a:hover{
+	text-decoration-line: underline ;
+	text-decoration-color: #ff8c00;
+}
+
+ul{
+	align: auto;
+	
+	font-size: 30px;
+	list-style-image: url('/project3test/folderOrange.png');
+}
+
+li{
+	margin-left:15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+li[class = document]{
+		list-style-image: url('/project3test/document.png');
+	
+}
+
+
+div[class = message] {
+	background: white;
+	color:grey;
+	font:small-caption;
+}
+
+input[type = text]{
+	border-radius: 55px;
+	border : 2px solid black;
+	color: black;
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+	
+}
+
+textarea{
+
+	border-radius: 15px;
+	border : 2px solid black;
+	color: black;
+	width: 250px;
+	height: 50px;
+	padding: 10px  10px 10px 10px;
+	
+}
+
+textarea:focus{
+	outline: none !important;
+	border : 2px solid #ff8c00;
+}
+
+button[type = submit]{
+	border-radius: 55px;
+	border : 2px solid black;
+	background: #ff8c00;
+	color: white;
+	width: 100px;
+	height: 30px;
+	
+}
+
+button[type = submit]:focus{
+	color: #ff8c00;
+	background: white;
+}
+
+button[type = submit]:hover{
+	color: white;
+	background: #ff4500;
+	cursor: pointer;
+}
+
+input[type = text]:focus {
+	outline: none !important;
+	border : 2px solid #ff8c00;
+	
+}
+
+input[type = password]:focus {
+	outline: none !important;
+	border : 2px solid #ff8c00;
+	
+}
+
+div[class = message] {
+	background: white;
+	color:grey;
+	text-align: start;
+	font:small-caption;
+}
+
+div[class = Error] {
+	background: white;
+	color:red;
+	text-align: start;
+	font:small-caption;
+}
+
+div[class = Warning] {
+	background: red;
+	border: double   6px;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+	padding: 10px 10px 10px 10px;
+	color:white;
+	text-align: center ;
+	text-vertical-align: ;
+	font:message-box;
+	text-decoration: bold;
+}
+
+
+
+

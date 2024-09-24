@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>PUBLIC PAGE</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/PublicPage.css" >
+</head>
+<body>
+
+<h1>PUBLIC PAGE</h1>
+
+
+<h2>LOGIN</h2>
+<form method="post" action="Login">
+			
+			<label for ="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter username" name="username" required /><br><br>
+			
+			<label for = "password" ><b>Password</b></label>
+			<input type="password" placeholder="Enter password" name="password" required/><br><br>
+				 
+			<button type="submit" >submit</button>
+</form>
+<div class="Error">
+	<span th:text="${loginMessage}"></span>
+</div>
+<br><br><br><br>
+<div class = "message">
+Don't you have an account?
+</div>
+
+
+<h2>REGISTRATION</h2>
+<form method="post" action="Registration" >
+			
+			<label for ="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter username" name="username" required /><br><br>
+			
+			<label for = "email" ><b>E-Mail</b></label>
+			<input type="text" placeholder="Enter e-mail" name="email" id="email" required/><br><br>
+			
+			<label for = "password" ><b>Password</b></label>
+			<input type="password" placeholder="Enter password" name="password" required/><br><br>
+				 
+			<button type="submit" >submit</button>
+</form>
+<div th:class = "${mesType}">
+<p th:text="${registrationMessage}"></p>
+</div>
+
+</body>
+</html>

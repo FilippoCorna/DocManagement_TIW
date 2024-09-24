@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contents Manager  </title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css" />
+</head>
+<body>
+
+<h1>GESTIONE CONTENUTI</h1>
+<a th:href = "@{/ShowHomePage}">Pagina precedente</a>
+<h3 th:text="${user.username}">Franco</h3>
+<div th:class = "${ErrorClass}">
+	<span th:text = "${Error}"></span>
+</div>
+<br><br>
+
+<h2>Crea Cartella</h2>
+<div th:class="${messageType}">
+	<span th:text="${folderCreated}"></span>
+</div><br>
+<form method="post" action="/project3test/CreateFolder">
+			
+			<label for ="name"><b>Name</b></label>
+			<input type="text" placeholder="Enter name" name="name" required /><br><br>
+			<button type="submit" >submit</button>
+</form>
+
+<br><br>
+
+<h2>Crea Sottocartella</h2>
+<div th:class="${messageType}">
+	<span th:text="${subCreated}"></span>
+</div><br>
+<form method="post" action="CreateSubfolder">
+			
+			<label for ="name"><b>Name</b></label>
+			<input type="text" placeholder="Enter name" name="name" required /><br><br>
+			
+			<p><b>Scegli una Cartella:</b></p>
+			<ul>
+			<li th:each="folder : ${folders}">
+			<input  type ="radio"  name="folderId" th:value="${folder.id}" 
+			th:id="${folder.name}"/>
+			<label th:for="${folder.name}" th:text="${folder.name}"></label>
+			</ul>
+			 
+			<button type="submit" >submit</button>
+</form>
+
+<br><br>
+
+<h2>Crea Documento</h2>
+<div th:class="${messageType}">
+	<span th:text="${documentCreated}"></span>
+</div><br>
+<form method="post" action="CreateDocument">
+			
+			<label for ="name"><b>Name</b></label>
+			<input type="text" placeholder="Enter name" name="name" required /><br><br>
+			<label for ="type"><b>Type</b></label>
+			<input type="text" placeholder="Enter type" name="type" required /><br><br>
+			<p><b>Summary</b></p>
+			<textarea  placeholder="Enter summary" id ="summary" 
+			name= "summary"  rows= "4" cols="40"  ></textarea><br><br>
+			<p><b>Scegli una Sottocartella</b></p>
+			<ul>
+			<li th:each="folder : ${folders}"
+				th:insert="@{WEB-INF/fragmentCreateDoc.html} :: list (folder)">
+			</li>
+			</ul>
+			
+			<button type="submit" >submit</button>
+</form>
+
+<br><br>
+
+<a th:href = "@{/ShowHomePage}">Pagina precedente</a>
+
+</body>
+</html>

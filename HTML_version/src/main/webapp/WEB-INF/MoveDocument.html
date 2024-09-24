@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>MoveDocument</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css" />
+</head>
+<body>
+
+<div class="header">
+<h1>Home Page </h1> 
+</div>
+
+
+<div class="text">
+<h2 th:text="${user.username}">Franco</h2>
+<a href="Logout">Logout</a> <a th:href = "@{/Documents(subfolderId=${subfolderId} , name=${notAllowedSubfolderName})}">Pagina precedente</a>
+
+<tbody th:remove ="all-but-first">
+<ul>
+	<li 
+		th:each="folder : ${folders}">
+		<div>
+			<span th:text="${folder.name}"><b>Cartella</b></span>
+			<ul>
+			<li 
+				th:each = "subfolder : ${folder.subfolders}">
+			<span th:text ="${subfolder.name}"></span>
+			<a th:if="${subfolder.id != notAllowedSubfolder.id}">
+				<a th:href ="@{/ChooseDestination(subfolderId=${subfolder.id} , documentId=${documentId})}">Sposta qui</a>
+			</a>
+			<a th:unless="${subfolder.id != notAllowedSubfolder.id}">
+  				 <p></p>
+			</a>
+			</li>
+			</ul>
+		</div>
+	</li>
+</ul>
+</tbody>
+</body>
+</html>

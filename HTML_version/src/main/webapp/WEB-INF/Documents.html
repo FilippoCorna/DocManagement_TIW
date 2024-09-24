@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Documents</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/home.css"  />
+</head>
+<body>
+<div class ="header">
+<h1>DOCUMENTI</h1>
+</div>
+<h3 th:text ="${user.username}">Franco</h3>
+<a href="Logout">Logout</a>
+<h4 class="Subfolder" th:text = "'Sottocartella: ' + ${subfolderName}">Sottocartella 1a</h4>
+
+	<label for ="documents"><b>Documenti</b></label>
+	<tbody th:remove="all-but-first">
+	<ul>
+	<li class="document" th:each = "document : ${documents}">
+	<span th:text ="${document.name}"> Documento Hello </span>
+		<a th:href= "@{/ShowDocument(documentId=${document.id} , 
+		subfolderId=${subfolderId} , name=${subfolderName})}">accedi</a>
+		<a th:href = "@{/MoveDocument(documentId=${document.id} , 
+		subfolderId=${subfolderId} , name=${subfolderName})}">sposta</a>
+	</li>
+	</ul>
+	<li>
+		Documento World
+		<a href= Documents.html>accedi</a>
+		<a href = "Home.html">sposta</a>
+	</li>
+	</tbody>
+	</ul> 	
+
+<a th:href = "@{/ShowHomePage}">Pagina precedente</a>
+
+
+</body>
+</html>

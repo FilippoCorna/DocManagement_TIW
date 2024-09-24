@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+ 	<!--/*  declare parameterized fragment called "list" */-->
+	<div th:fragment="list(folder)">
+
+		<div>
+			<span th:text="${folder.name}"><b>Cartella</b></span>
+			<ul>
+			<li th:each = "subfolder : ${folder.subfolders}">
+			<input  type ="radio"  name="subfolderId" th:value="${subfolder.id}" 
+			th:id="${subfolder.name}" />
+			<label th:for="${subfolder.name}" th:text="${subfolder.name}"></label>
+			</li>
+			</ul>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
